@@ -1,0 +1,44 @@
+---
+title: "Practica programada 2 Rosa Munoz"
+author: "Nayib Vargas"
+format: 
+  html:
+    code-fold: true
+    theme: cosmo
+  pdf: default
+  
+---
+# link git: https://github.com/rosaelenamunoz/programada2.git
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+data = pd.read_csv("./data_science_salaries.csv")
+
+```
+
+## Visualización de datos en Seaborn
+
+```{python}
+plt.figure(figsize=(15, 10))
+sns.boxplot(x="experience_level", y="job_title", data=data)
+plt.title("Experiencia por título de trabajo")
+plt.show()
+```
+
+
+```{python}
+plt.figure(figsize=(10, 6))
+sns.histplot(data=data, x="Salary",kde=True)
+plt.title("Salario")
+plt.show()
+```
+
+```{python}
+plt.figure(figsize=(10, 6))
+sns.boxplot(x="employment_type", y="salary_currency", data=data)
+plt.title("Salario recurrente por tipo de empleado ")
+plt.show()
+```
+
