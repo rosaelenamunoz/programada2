@@ -21,24 +21,24 @@ data = pd.read_csv("./data_science_salaries.csv")
 ## Visualización de datos en Seaborn
 
 ```{python}
-plt.figure(figsize=(15, 10))
-sns.boxplot(x="experience_level", y="job_title", data=data)
-plt.title("Experiencia por título de trabajo")
+plt.figure(figsize=(10, 8))
+sns.boxplot(x="employment_type", y="experience_level", data=data)
+plt.title("Tipo de empleo por nivel experiencia")
 plt.show()
 ```
 
 
 ```{python}
 plt.figure(figsize=(10, 6))
-sns.histplot(data=data, x="Salary",kde=True)
-plt.title("Salario")
+sns.histplot(data=data, x="work_year",kde=True)
+plt.title("Año de trabajo")
 plt.show()
 ```
 
 ```{python}
-plt.figure(figsize=(10, 6))
-sns.boxplot(x="employment_type", y="salary_currency", data=data)
-plt.title("Salario recurrente por tipo de empleado ")
+plt.figure(figsize=(15, 6))
+sns.boxplot(x="work_year", y="experience_level", data=data)
+plt.title("Nivel de experiencia por años de trabajo")
 plt.show()
 ```
 
